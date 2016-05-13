@@ -5,6 +5,12 @@ var name = 'Tyler';
 //If the argument you passed in is equal to 'Tyler', return true. If it's not, return false.
 
   //Code Here
+  function isTyler(name) {
+    if(name === 'Tyler') {
+      return true;
+    }
+    return false;
+  }
 
 //////////////////PROBLEM 2////////////////////
 
@@ -13,7 +19,9 @@ var name = 'Tyler';
 
 
   //Code Here
-
+  function getName() {
+    return prompt("What is your name?");
+  }
 
 //////////////////PROBLEM 3////////////////////
 
@@ -23,6 +31,9 @@ var name = 'Tyler';
 //then alerts "Welcome, " plus whatever the users name is.
 
   //Code Here
+  function welcome() {
+    alert("Welcome, " + getName());
+  }
 
 
 //////////////////PROBLEM 4////////////////////
@@ -33,6 +44,8 @@ var name = 'Tyler';
 //What is the difference between arguments and parameters?
 
   //Answer Here
+  // Parameters are placeholders for functions. The function uses the parameter name when it is being defined.
+  // Parameters are replaced by arguments when the function is invoked
 
 
 //////////////////PROBLEM 5////////////////////
@@ -43,7 +56,12 @@ var name = 'Tyler';
 
 
   //Answer Here
-
+  // false
+  // undefined
+  // null
+  // ""
+  // 0
+  // NaN
 
 
 //////////////////PROBLEM 6////////////////////
@@ -53,16 +71,20 @@ var name = 'Tyler';
 //Create a function called myName that returns your name
 
   //Code Here
-  
+  function myName() {
+    return "Joe";
+  }
+
 
 
 //Now save the function definition of myName into a new variable called newMyName
 
   //Code Here
+  var newMyName = myName;
 
 //Now alert the result of invoking newMyName
 
-
+newMyName();
 
 //////////////////PROBLEM 7////////////////////
 
@@ -71,9 +93,17 @@ var name = 'Tyler';
 //Create a function called outerFn which returns an anonymous function which returns your name.
 
   //Code Here
+  function outerFn() {
+    return function(){
+      return 'Joe';
+    }
+  }
 
 //Now save the result of invoking outerFn into a variable called innerFn.
 
   //Code Here
+  var innerFn = outerFn();
 
 //Now invoke innerFn.
+
+innerFn();
